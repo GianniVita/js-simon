@@ -21,11 +21,11 @@ Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali
 
  */
 // Creo una Variabile di appoggio per mettere i numeri dentro il Div
-const randomNumbersUno = document.getElementById ("casualnumbersUno")
-const randomNumbersDue = document.getElementById ("casualnumbersDue")
-const randomNumbersTre = document.getElementById ("casualnumbersTre")
-const randomNumbersQuattro = document.getElementById ("casualnumbersQuattro")
-const randomNumbersCinque = document.getElementById ("casualnumbersCinque")
+const randomNumbersUno = document.getElementById("casualnumbersUno")
+const randomNumbersDue = document.getElementById("casualnumbersDue")
+const randomNumbersTre = document.getElementById("casualnumbersTre")
+const randomNumbersQuattro = document.getElementById("casualnumbersQuattro")
+const randomNumbersCinque = document.getElementById("casualnumbersCinque")
 //Crea una costante che generi 5 numeri casuali con mathRandom
 const casualNumberOne = Math.floor(Math.random() * 101);// Returns a random integer/number from 0 to 100:
 console.log(casualNumberOne);
@@ -34,50 +34,70 @@ const casualNumberThree = Math.floor(Math.random() * 101);
 const casualNumberFour = Math.floor(Math.random() * 101);
 const casualNumberFive = Math.floor(Math.random() * 101);
 
-console.log(casualNumberOne, casualNumberTwo, casualNumberThree, casualNumberFour,casualNumberFive);
+console.log(casualNumberOne, casualNumberTwo, casualNumberThree, casualNumberFour, casualNumberFive);
 
 //Inserisci la costante in pagina dentro un div con innerHTML
 randomNumbersUno.innerHTML = casualNumberOne;
 randomNumbersDue.innerHTML = casualNumberTwo;
 randomNumbersTre.innerHTML = casualNumberThree;
 randomNumbersQuattro.innerHTML = casualNumberFour;
-randomNumbersCinque.innerHTML = casualNumberFive; 
+randomNumbersCinque.innerHTML = casualNumberFive;
 
 
 //  - dovremmo usare una time function
 setTimeout(function () {
     //Dopo 30 secondi i numeri scompaioni
     // dopo il tempo nascondiamo i numeri
-randomNumbersUno.classList.add("dNone")
-randomNumbersDue.classList.add("dNone")
-randomNumbersTre.classList.add("dNone")
-randomNumbersQuattro.classList.add("dNone")
-randomNumbersCinque.classList.add("dNone")
+    randomNumbersUno.classList.add("dNone")
+    randomNumbersDue.classList.add("dNone")
+    randomNumbersTre.classList.add("dNone")
+    randomNumbersQuattro.classList.add("dNone")
+    randomNumbersCinque.classList.add("dNone")
     // mostriamo 5 input dove l'utente può inserire i numeri che ricorda
-const userInput = document.getElementById("user-field")
+    const userInput = document.getElementById("user-field")
     //Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
-userInput.classList.remove("dNone")
+    userInput.classList.remove("dNone")
 
-}, 4000 );
+}, 4000);
 
+document.getElementById("user-field").addEventListener("submit", function (event) {
+    event.preventDefault()
     //Bisogna che riteniamo i numeri
     // - Crea una variabile vuota 'let' per salvare i numeri utente
-let numeriUtente = [];
+    let numeriUtente = [];
     // - Bisogna creare un ciclo per vedere i numeri immessi dall'utente
     for (let i = 1; i <= 5; i++) {
         let visualnum = document.getElementById("input" + i).value;
+        numeriUtente.push(visualnum)
         console.log(numeriUtente);
-        
     }
     //Bisogna avere anche una variabile per inserire i numeri generati
-    
     // - Crea una variabile anche qui 'let' per numeri generati
-
+    let numeriCpu = [casualNumberOne, casualNumberTwo, casualNumberThree, casualNumberFour, casualNumberFive];
     // Una volta salvati i numeri in due variabili bisogna fare il confronto, cioé - crea una condizione IF
     // - IF (var1 === var2){facciamo vedere i numeri uguali}
+
     // Come facciamo a far vedere i numeri uguali?
+    //  - l'ordine non ha importanza 
+    for (let i = 0; i < numeriUtente.length; i++) {
+        const Numero = numeriUtente[i];
+
+        if (numeriCpu.includes(parseInt(Numero))) {
+            console.log(`Hai azzeccato questi numeri${Numero}`);
+            
+        }else {
+            console.log(`I numeri non erano corretti`);
+            
+        } 
+    }
+});
+
+
+// Dobbiamo far vedere i numeri in pagina azzeccati dall'utente
 
 
 
 
-//  - l'ordine non ha importanza 
+
+
+
