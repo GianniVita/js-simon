@@ -58,14 +58,15 @@ const userInput = document.getElementById("user-field")
     //Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
 userInput.classList.remove("dNone")
 
-}, 3000 );
+}, 4000 );
 
     //Bisogna che riteniamo i numeri
     // - Crea una variabile vuota 'let' per salvare i numeri utente
 let numeriUtente = [];
     // - Bisogna creare un ciclo per vedere i numeri immessi dall'utente
     for (let i = 1; i <= 5; i++) {
-        let visualnum = 
+        let visualnum = document.getElementById("input" + i).value;
+        console.log(numeriUtente);
         
     }
     //Bisogna avere anche una variabile per inserire i numeri generati
