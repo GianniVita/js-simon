@@ -20,3 +20,11 @@ Consigli del giorno:
 Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali e quanti numeri ci sono in comune tra i due array"
 
  */
+
+//Crea una costante che generi 5 numeri casuali con mathRandom
+const casualNumber = 
+//Inserisci la costante in pagina dentro un div con innerHTML
+//Dopo 30 secondi i numeri scompaioni
+//  - dovremmo usare una time function
+//Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
+//  - l'ordine non ha importanza 
