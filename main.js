@@ -55,11 +55,27 @@ randomNumbersQuattro.classList.add("dNone")
 randomNumbersCinque.classList.add("dNone")
     // mostriamo 5 input dove l'utente può inserire i numeri che ricorda
 const userInput = document.getElementById("user-field")
-userInput.classList.remove("dNone")
     //Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
-    
+userInput.classList.remove("dNone")
 
 }, 3000 );
+
+    //Bisogna che riteniamo i numeri
+    // - Crea una variabile vuota 'let' per salvare i numeri utente
+let numeriUtente = [];
+    // - Bisogna creare un ciclo per vedere i numeri immessi dall'utente
+    for (let i = 1; i <= 5; i++) {
+        let visualnum = 
+        
+    }
+    //Bisogna avere anche una variabile per inserire i numeri generati
+    
+    // - Crea una variabile anche qui 'let' per numeri generati
+
+    // Una volta salvati i numeri in due variabili bisogna fare il confronto, cioé - crea una condizione IF
+    // - IF (var1 === var2){facciamo vedere i numeri uguali}
+    // Come facciamo a far vedere i numeri uguali?
+
 
 
 
