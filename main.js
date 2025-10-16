@@ -22,8 +22,17 @@ Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali
  */
 
 //Crea una costante che generi 5 numeri casuali con mathRandom
-const casualNumber = 
+const casualNumberOne = Math.floor(Math.random() * 101);// Returns a random integer/number from 0 to 100:
+console.log(casualNumberOne);
+const casualNumberTwo = Math.floor(Math.random() * 101);
+const casualNumberThree = Math.floor(Math.random() * 101);
+const casualNumberFour = Math.floor(Math.random() * 101);
+const casualNumberFive = Math.floor(Math.random() * 101);
+
+console.log(casualNumberOne, casualNumberTwo, casualNumberThree, casualNumberFour,casualNumberFive);
+
 //Inserisci la costante in pagina dentro un div con innerHTML
+
 //Dopo 30 secondi i numeri scompaioni
 //  - dovremmo usare una time function
 //Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
