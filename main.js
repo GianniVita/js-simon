@@ -22,7 +22,7 @@ Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali
  */
 // Creo una Variabile di appoggio per mettere i numeri dentro il Div
 const randomNumbersUno = document.getElementById ("casualnumbersUno")
-const randomNumbersDue = document.getElementById ("casualnumberDue")
+const randomNumbersDue = document.getElementById ("casualnumbersDue")
 const randomNumbersTre = document.getElementById ("casualnumbersTre")
 const randomNumbersQuattro = document.getElementById ("casualnumbersQuattro")
 const randomNumbersCinque = document.getElementById ("casualnumbersCinque")
@@ -44,7 +44,23 @@ randomNumbersQuattro.innerHTML = casualNumberFour;
 randomNumbersCinque.innerHTML = casualNumberFive; 
 
 
-//Dopo 30 secondi i numeri scompaioni
 //  - dovremmo usare una time function
-//Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
+setTimeout(function () {
+    //Dopo 30 secondi i numeri scompaioni
+    // dopo il tempo nascondiamo i numeri
+randomNumbersUno.classList.add("dNone")
+randomNumbersDue.classList.add("dNone")
+randomNumbersTre.classList.add("dNone")
+randomNumbersQuattro.classList.add("dNone")
+randomNumbersCinque.classList.add("dNone")
+    // mostriamo 5 input dove l'utente può inserire i numeri che ricorda
+const userInput = document.getElementById("user-field")
+userInput.classList.remove("dNone")
+    //Creare 5 input in html dove l'utente può inserire i 5 numeri randomici che si ricorda
+    
+
+}, 3000 );
+
+
+
 //  - l'ordine non ha importanza 
