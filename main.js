@@ -20,7 +20,12 @@ Consigli del giorno:
 Immaginate la logica come fosse uno snack: "Dati 2 array di numeri, indica quali e quanti numeri ci sono in comune tra i due array"
 
  */
-
+// Creo una Variabile di appoggio per mettere i numeri dentro il Div
+const randomNumbersUno = document.getElementById ("casualnumbersUno")
+const randomNumbersDue = document.getElementById ("casualnumberDue")
+const randomNumbersTre = document.getElementById ("casualnumbersTre")
+const randomNumbersQuattro = document.getElementById ("casualnumbersQuattro")
+const randomNumbersCinque = document.getElementById ("casualnumbersCinque")
 //Crea una costante che generi 5 numeri casuali con mathRandom
 const casualNumberOne = Math.floor(Math.random() * 101);// Returns a random integer/number from 0 to 100:
 console.log(casualNumberOne);
@@ -32,6 +37,12 @@ const casualNumberFive = Math.floor(Math.random() * 101);
 console.log(casualNumberOne, casualNumberTwo, casualNumberThree, casualNumberFour,casualNumberFive);
 
 //Inserisci la costante in pagina dentro un div con innerHTML
+randomNumbersUno.innerHTML = casualNumberOne;
+randomNumbersDue.innerHTML = casualNumberTwo;
+randomNumbersTre.innerHTML = casualNumberThree;
+randomNumbersQuattro.innerHTML = casualNumberFour;
+randomNumbersCinque.innerHTML = casualNumberFive; 
+
 
 //Dopo 30 secondi i numeri scompaioni
 //  - dovremmo usare una time function
